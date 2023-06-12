@@ -1,20 +1,13 @@
-# Mentorama Model API
+## Previsão de Vendas usando Random Forest
+Este projeto tem como objetivo utilizar o algoritmo Random Forest para fazer previsões de vendas com base nos investimentos em publicidade em diferentes canais, como TV, rádio e jornal. O Random Forest é um algoritmo de aprendizado de máquina supervisionado que utiliza a combinação de várias árvores de decisão para realizar previsões mais precisas.
 
-Modelo treinado utilizando uma random forest. 
+## Funcionalidades
+O sistema possui as seguintes funcionalidades principais:
 
-### Rotas
-- POST
-    ```/predict:``` versão final do modelo para previsão
-        
-        model inputs:
-            -  X1: Valor de Marketing investindo em TV
-            -  X2: Valor de Marketing investindo em Radio
-            -  X3: Valor de Marketing investindo em jornal
+Dados de Treinamento: O sistema utiliza um conjunto de dados históricos que inclui informações sobre os investimentos em publicidade (TV, rádio e jornal) e as vendas correspondentes. Esses dados são utilizados para treinar o modelo de Random Forest.
 
-        model output: 
-        prediction: valor que será retornado em vendas em Milhões de reais
+Modelo de Random Forest: O sistema treina um modelo de Random Forest usando os dados de treinamento. O modelo é capaz de aprender as relações entre os investimentos em publicidade e as vendas e fazer previsões com base nessas relações.
 
-- GET
-    ```/model_health/<model_id>```: Metricas do modelo. Recall e Precision disponíveis. 
-        
-        model_id: id do modelo em produção
+Entrada de Investimentos: Os usuários podem inserir os valores de investimentos em TV, rádio e jornal para um determinado período. O sistema utiliza o modelo de Random Forest treinado para fazer previsões de vendas correspondentes com base nesses investimentos.
+
+Previsões de Vendas: O sistema exibe as previsões de vendas correspondentes aos investimentos inseridos pelos usuários. Isso auxilia as empresas na tomada de decisões sobre a alocação de recursos em diferentes canais de publicidade.
